@@ -14,6 +14,15 @@ Download zip file on the right of the screen. ![download](http://www.byrobingame
 
 Install the zip file Go to : http://community.stencyl.com/index.php/topic,30432.0.html
 
+###IMPORTENT
+Because of App Transport Security (ATS) in IOS9, HTTP will not loads in IOS9.
+
+To get it work on IOS9  you have to set NSAllowsArbitraryLoads flag to treu in the INFO.plist file.
+
+See this post how to do this:<br/>
+http://community.stencyl.com/index.php/index.php?topic=44271.msg247444#msg247444
+
+
 ## Documentation and Blocks Example
 //TODO
 
