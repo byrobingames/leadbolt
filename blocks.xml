@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette>
+    
+    <block tag="initLeadbolt" spec="Initialize Leadbolt with 'ID': %0 [c:leadbolt]" code="Leadbolt.init(~);" help="Inititalize Leadbolt ads at the begin of your project!" type="action" color="charcoal" returns="void">
+        <fields>
+            <text order="0"></text>
+        </fields>
+    </block>
+    
+    <block tag="fetchInterstitialLeadbolt" spec="Leadbolt: Load Interstitial Ad [c:leadbolt]" code="Leadbolt.fetchInterstitial();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+  
+	<block tag="showInterstitialLeadbolt" spec="Leadbolt: Show Interstitial Ad [c:leadbolt]" code="Leadbolt.showInterstitial();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+    
+    <block tag="fetchRewardedVideoLeadbolt" spec="Leadbolt: Load Rewarded Video Ad [c:leadbolt]" code="Leadbolt.fetchRewardedVideo();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+    
+    <block tag="showRewardedVideoLeadbolt" spec="Leadbolt: Show Rewarded Video Ad [c:leadbolt]" code="Leadbolt.showRewardedVideo();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+       
+    <block tag="getAdInfoLeadbolt" spec="Leadbolt: Ad %0 [c:leadbolt]" code="Leadbolt.getAdInfo(~)" type="normal" color="charcoal" returns="boolean">
+        <fields>
+            <dropdown order="0">
+				<choices>
+					<c text="did successfully load" code="0"></c>
+					<c text="did fail to load" code="1"></c>
+					<c text="is Closed" code="2"></c>
+					<c text="is clicked" code="3"></c>
+				</choices>
+			</dropdown>
+        </fields>
+    </block>
+    
+    <block tag="getRewardedInfoLeadbolt" spec="Leadbolt: Rewarded Video %0 [c:leadbolt]" code="Leadbolt.getRewardedVideoInfo(~)" type="normal" color="charcoal" returns="boolean">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="has been fully watched" code="0"></c>
+                    <c text="has not been fully watched" code="1"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+
+</palette>
