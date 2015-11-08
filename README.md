@@ -24,6 +24,16 @@ http://community.stencyl.com/index.php/index.php?topic=44271.msg247444#msg247444
 
 
 ## Documentation and Blocks Example
+
+Blocks:
+![initleadbolt](http://www.byrobingames.com/stencyl/leadbolt/initleadbolt.png)</br>
+![loadinterstitial](http://www.byrobingames.com/stencyl/leadbolt/loadinterstitialleadbolt.png)</br>
+![showinterstitial](http://www.byrobingames.com/stencyl/leadbolt/showinterstitialleadbolt.png)</br>
+![loadrewarded](http://www.byrobingames.com/stencyl/leadbolt/loadrewardedleadbolt.png)</br>
+![showrewarded](http://www.byrobingames.com/stencyl/leadbolt/showrewardedleadbolt.png)</br>
+![callback1](http://www.byrobingames.com/stencyl/leadbolt/callbackleadbolt.png)</br>
+![callback2](http://www.byrobingames.com/stencyl/leadbolt/callbackrewardedleadbolt.png)</br>
+
 //TODO
 
 ## Donate
