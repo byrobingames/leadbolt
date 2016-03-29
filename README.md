@@ -10,20 +10,23 @@ Stencyl extension for "Leadbolt" (http://www.leadbolt.com) on iOS and Android. T
   * Rewarded Video Support.
 
 ## How to Install
-Download zip file on the right of the screen. ![download](http://www.byrobingames.com/stencyl/heyzap/download.png) on this page https://github.com/byrobingames/leadbolt<br />
 
-Install the zip file Go to : http://community.stencyl.com/index.php/topic,30432.0.html
+Go To: http://byrobin.nl/store/product/leadbolt-advertising-for-ios-android-stencylopenfl/
+
+Add the extension to the cart en proceed with checkout. After you successfully placed the order, you will get an e-mail with the download link or go to “<strong>My Account</strong>” section where you can also find the download link.
+
+Or
+
+Use "Download Zip" on this page
+
+Install the zip file: Go to : <a href="http://community.stencyl.com/index.php/topic,30432.0.html" target="_blank">http://community.stencyl.com/index.php/topic,30432.0.html</a>
 
 ###IMPORTENT
-Because of App Transport Security (ATS) in IOS9, HTTP will not loads in IOS9.
 
-To get it work on IOS9  you have to set NSAllowsArbitraryLoads flag to treu in the INFO.plist file.
-
-See this post how to do this:<br/>
-http://community.stencyl.com/index.php/index.php?topic=44271.msg247444#msg247444
+To get it work on IOS you have to Download, Install and Enable “<a href="http://byrobin.nl/store/product/byrobin-extension-manager-stencylopenfl/">byRobin Extension Manager</a>”
 
 
-## Documentation and Blocks Example
+## Documentation and Block Examples
 
 This extension contains the following blocks. You can find them in your Palette under
 the “Extension” tab.<br>

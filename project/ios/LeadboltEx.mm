@@ -12,7 +12,7 @@
 
 using namespace leadbolt;
 
-@interface LeadboltController : UIViewController
+@interface LeadboltController : NSObject
 {
     UIViewController *root;
     
