@@ -14,11 +14,8 @@
         <echo value='| Leadbolt: Enable byRobin Extension manager in "Setting->Extension"         |' />
         <echo value='|----------------------------------------------------------------------------|' />
         
-        <dependency name="frameworks/libAppTracker.a" />
-        <template path="frameworks/libAppTracker.a" rename="lib/arm64/libAppTracker.a" />
-        <template path="frameworks/libAppTracker.a" rename="lib/armv7/libAppTracker.a" />
-        <template path="frameworks/libAppTracker.a" rename="lib/i386/libAppTracker.a" />
-        <template path="frameworks/libAppTracker.a" rename="lib/x86_64/libAppTracker.a" />
+        <dependency path="frameworks/AppTracker.framework" />
+        
         
 	</section>
 </extension>

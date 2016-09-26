@@ -7,12 +7,12 @@
 
 #include <LeadboltEx.h>
 #import <UIKit/UIKit.h>
-#import "AppTracker.h"
+#import <AppTracker/AppTracker.h>
 
 
 using namespace leadbolt;
 
-@interface LeadboltController : NSObject
+@interface LeadboltController : NSObject <AppModuleDelegate>
 {
     UIViewController *root;
     
@@ -52,8 +52,7 @@ using namespace leadbolt;
     root = [[[UIApplication sharedApplication] keyWindow] rootViewController];
     
     // Leadbolt SDK initialization
-    [AppTracker enableLog:YES];
-    [self initializeEventListeners];
+    [AppTracker setAppModuleDelegate:self];
     [AppTracker startSession:ID];
     
     return self;
@@ -86,45 +85,50 @@ using namespace leadbolt;
 }
 
 //EventListeners
--(void)initializeEventListeners
-{
-    // Update this to trigger relevant sdk event listeners
-    
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    NSString *afw = @"AppFireworksNotification";
-    [nc addObserverForName:@"onModuleLoaded" object:afw queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
-        //adLoaded = YES;
-        //NSLog(@"Ad displayed");
-        
-    }];
-    [nc addObserverForName:@"onModuleFailed" object:afw queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
-        if([[notif.userInfo objectForKey:@"cached"] isEqualToString:@"yes"]) {
+
+-(void)onModuleCached:(NSString *)placement
+    {
+        NSLog(@"Ad cached successfully - %@", placement);
+        // Add code if not auto-recaching for when loadModuleModuleToCache is successful
+        adLoaded = YES;
+    }
+-(void)onModuleLoaded:(NSString *)placement
+    {
+        NSLog(@"Ad loaded successfully - %@", placement);
+        // Add code here to pause game and/or all media including audio
+    }
+-(void)onModuleClicked:(NSString *)placement
+    {
+        NSLog(@"Ad clicked by user - %@", placement);
+        adIsClicked = YES;
+    }
+-(void)onModuleClosed:(NSString *)placement
+    {
+        NSLog(@"Ad closed by user - %@", placement);
+        // Add code here to resume game and/or all media including audio
+         adClosed = YES;
+    }
+-(void)onModuleFailed:(NSString *)placement error:(NSString *)error cached:(BOOL)iscached
+    {
+        if(iscached) {
+            NSLog(@"Ad failed to cache - %@", placement);
             adFailToLoad = NO;
         } else {
-           adFailToLoad = NO;
+            NSLog(@"Ad failed to display - %@", placement);
+            adFailToLoad = NO;
         }
-    }];
-    [nc addObserverForName:@"onModuleClosed" object:afw queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
-         adClosed = YES;
-    }];
-    [nc addObserverForName:@"onModuleCached" object:afw queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
-        adLoaded = YES;
-        //NSLog(@"Ad successfully cached");
-        // Ad has been cached, now enable the Show Ad button
-    }];
-    [nc addObserverForName:@"onModuleClicked" object:afw queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
-        adIsClicked = YES;
-    }];
-    [nc addObserverForName:@"onMediaFinished" object:afw queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
-        if([[notif.userInfo objectForKey:@"viewCompleted"] isEqualToString:@"yes"]) {
+    }
+-(void) onMediaFinished:(BOOL)viewCompleted
+    {
+        if(viewCompleted) {
+            NSLog(@"User finished watching rewarded video");
             completeRewardedVideo = YES;
         } else {
+            NSLog(@"User skipped watching rewarded video");
             failToCompleteRewardedVideo = YES;
         }
-    }];
-}
-
-
+    }
+    
 @end
 
 namespace leadbolt {

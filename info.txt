@@ -1,6 +1,6 @@
-name=Leadbolt Advertisement (byRobin)
+name=Leadbolt Advertisement (1.3) (byRobin)
 description=Implements Leadbolt ads on iOS and Android.
 author=Robin Schaafsma
 website=http://www.byrobingames.com
-version=1.2
+version=1.3
 compatibility=mobile

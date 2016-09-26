@@ -18,6 +18,7 @@
         <depend name="${HXCPP}/include/hx/CFFI.h"/>
         <compilerflag value="-IiPhone/include"/>
         <compilerflag value="-Iinclude"/>
+         <compilerflag value="-F../frameworks" />
         <file name="ios/LeadboltEx.mm"/>
     </files>
     

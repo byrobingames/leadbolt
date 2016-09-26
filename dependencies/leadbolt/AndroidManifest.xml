@@ -4,7 +4,11 @@
     <application>
         
         <!-- Leadbolt -->
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:name="com.apptracker.android.module.AppModuleActivity" android:hardwareAccelerated="false"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:name="com.apptracker.android.module.AppModuleActivity"
+            android:hardwareAccelerated="false">
+        </activity>
+        <service android:name="com.apptracker.android.track.AppTrackerService" />
 
     </application>
  
