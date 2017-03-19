@@ -190,7 +190,7 @@ public class LeadboltEx extends Extension {
         @Override
         public void onModuleLoaded(String location) {
             Log.i("AppTracker", "Ad loaded successfully - "+location);
-            //adLoaded = true;
+            adLoaded = true;
         }
         @Override
         public void onModuleFailed(String location, String error, boolean isCache) {

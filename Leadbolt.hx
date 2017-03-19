@@ -1,6 +1,13 @@
 package;
 
+#if cpp
+import cpp.Lib;
+#elseif neko
+import neko.Lib;
+#else
 import openfl.Lib;
+#end
+
 import com.stencyl.behavior.Script;
 
 class Leadbolt {

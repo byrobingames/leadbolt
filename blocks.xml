@@ -7,23 +7,25 @@
         </fields>
     </block>
     
-    <block tag="fetchInterstitialLeadbolt" spec="Leadbolt: Load Interstitial Ad [c:leadbolt]" code="Leadbolt.fetchInterstitial();" type="action" color="charcoal" returns="void">
+    <block tag="fetch-show-InterstitialLeadbolt" spec="Leadbolt: %0 Interstitial Ad [c:leadbolt]" code="Leadbolt.~();" type="action" color="charcoal" returns="void">
         <fields>
-        </fields>
-    </block>
-  
-	<block tag="showInterstitialLeadbolt" spec="Leadbolt: Show Interstitial Ad [c:leadbolt]" code="Leadbolt.showInterstitial();" type="action" color="charcoal" returns="void">
-        <fields>
-        </fields>
-    </block>
-    
-    <block tag="fetchRewardedVideoLeadbolt" spec="Leadbolt: Load Rewarded Video Ad [c:leadbolt]" code="Leadbolt.fetchRewardedVideo();" type="action" color="charcoal" returns="void">
-        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Load" code="fetchInterstitial"></c>
+                    <c text="Show" code="showInterstitial"></c>
+                </choices>
+            </dropdown>
         </fields>
     </block>
     
-    <block tag="showRewardedVideoLeadbolt" spec="Leadbolt: Show Rewarded Video Ad [c:leadbolt]" code="Leadbolt.showRewardedVideo();" type="action" color="charcoal" returns="void">
+    <block tag="fetch-show-RewardedVideoLeadbolt" spec="Leadbolt: %0 Rewarded Video Ad [c:leadbolt]" code="Leadbolt.~();" type="action" color="charcoal" returns="void">
         <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Load" code="fetchRewardedVideo"></c>
+                    <c text="Show" code="showRewardedVideo"></c>
+                </choices>
+            </dropdown>
         </fields>
     </block>
        

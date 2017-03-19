@@ -1,8 +1,8 @@
 //
-//  AppTracker.h - v7.0
+//  AppTracker.h - v8.0
 //
 //  Created by Leadbolt.
-//  Copyright (c) 2016 Leadbolt. All rights reserved.
+//  Copyright (c) 2017 Leadbolt. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -20,14 +20,6 @@
 -(void) onModuleCached:(NSString *)placement;
 -(void) onModuleFailed:(NSString *)placement error:(NSString *)error cached:(BOOL)iscached;
 -(void) onMediaFinished:(BOOL)viewCompleted;
-
-@end
-
-@protocol ATNativeAdDelegate <NSObject>
-
-@optional
--(void) onAdsLoaded:(ATNativeAdCollection *)collection;
--(void) onAdsFailed:(ATNativeAdError)error;
 
 @end
 
