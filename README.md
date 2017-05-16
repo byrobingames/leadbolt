@@ -4,7 +4,7 @@ For Stencyl 3.4 and above
 
 Stencyl extension for "Leadbolt" (http://www.leadbolt.com) on iOS and Android. This extension allows you to easily integrate Leadbolt on your Stencyl game / application. (http://www.stencyl.com)
 
-###IMPORTENT
+### IMPORTENT
 
 This Extension Required the Toolset Extension Manager http://byrobin.nl/store/product/byrobintoolsetextension/
 
