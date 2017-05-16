@@ -6,7 +6,9 @@ Stencyl extension for "Leadbolt" (http://www.leadbolt.com) on iOS and Android. T
 
 ###IMPORTENT
 
-To get it work on IOS you have to Download, Install and Enable “<a href="http://byrobin.nl/store/product/byrobin-extension-manager-stencylopenfl/">byRobin Extension Manager</a>”
+This Extension Required the Toolset Extension Manager http://byrobin.nl/store/product/byrobintoolsetextension/
+
+[![leadbolttoolset](http://byrobin.nl/store/wp-content/uploads/sites/4/2016/03/leadbolttoolset.png)]
 
 ## Main Features
 
