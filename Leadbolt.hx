@@ -9,6 +9,7 @@ import openfl.Lib;
 #end
 
 import com.stencyl.behavior.Script;
+import scripts.ByRobinAssets;
 
 class Leadbolt {
 
@@ -59,8 +60,13 @@ class Leadbolt {
 	}
 	
 	
-	public static function init(leadboltId:String){
-	
+	public static function init(){
+		#if ios
+		var leadboltId:String = ByRobinAssets.LBIosApiKey;
+		#elseif android
+		var leadboltId:String = ByRobinAssets.LBAndroidApiKey;
+		#end
+		
 		#if ios
 		if(initialized) return;
 		initialized = true;

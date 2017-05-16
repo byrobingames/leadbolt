@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <palette>
     
-    <block tag="initLeadbolt" spec="Initialize Leadbolt with 'ID': %0 [c:leadbolt]" code="Leadbolt.init(~);" help="Inititalize Leadbolt ads at the begin of your project!" type="action" color="charcoal" returns="void">
+    <block tag="initLeadbolt" spec="Initialize Leadbolt [c:leadbolt]" code="Leadbolt.init();" help="Inititalize Leadbolt ads at the begin of your project!" type="action" color="charcoal" returns="void">
         <fields>
-            <text order="0"></text>
         </fields>
     </block>
     
