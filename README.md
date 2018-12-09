@@ -6,9 +6,9 @@ Stencyl extension for "Leadbolt" (http://www.leadbolt.com) on iOS and Android. T
 
 ### IMPORTENT
 
-This Extension Required the Toolset Extension Manager http://byrobin.nl/store/product/byrobintoolsetextension/
+This Extension Required the Toolset Extension Manager [https://byrobingames.github.io](https://byrobingames.github.io)
 
-[![leadbolttoolset](http://byrobin.nl/store/wp-content/uploads/sites/4/2016/03/leadbolttoolset.png)]
+![leadbolttoolset](https://byrobingames.github.io/img/leadbolt/leadbolttoolset.png)
 
 ## Main Features
 
@@ -17,39 +17,34 @@ This Extension Required the Toolset Extension Manager http://byrobin.nl/store/pr
 
 ## How to Install
 
-Go To: http://byrobin.nl/store/product/leadbolt-advertising-for-ios-android-stencylopenfl/
+To install this Engine Extension, go to the toolset (byRobin Extension Mananger) in the Extension menu of your game inside Stencyl.<br/>
+Select the Engine Extension from the left menu and click on "Download"
 
-Add the extension to the cart en proceed with checkout. After you successfully placed the order, you will get an e-mail with the download link or go to “<strong>My Account</strong>” section where you can also find the download link.
-
-Or
-
-Use "Download Zip" on this page
-
-Install the zip file: Go to : <a href="http://community.stencyl.com/index.php/topic,30432.0.html" target="_blank">http://community.stencyl.com/index.php/topic,30432.0.html</a>
-
+If you not have byRobin Extension Mananger installed, install this first.
+Go to: [https://byrobingames.github.io](https://byrobingames.github.io)
 
 ## Documentation and Block Examples
 
 This extension contains the following blocks. You can find them in your Palette under
 the “Extension” tab.<br>
 
-![initleadbolt](http://www.byrobingames.com/stencyl/leadbolt/initleadbolt.png)</br>
+![initleadbolt](https://byrobingames.github.io/img/leadbolt/initleadbolt.png)<br/>
 Use this block to initialize your Leadbolt. Use this block once per user
 session (from the moment the user starts to play until the user quits the game). For example in a loading scene.
 
-![loadinterstitial](http://www.byrobingames.com/stencyl/leadbolt/loadinterstitialleadbolt.png)</br>
+![loadinterstitial](https://byrobingames.github.io/img/leadbolt/loadinterstitialleadbolt.png)<br/>
 Use this block to load the interstitial ad from leadbolt, before you can show the interstitial. (When scene is created)
 
-![showinterstitial](http://www.byrobingames.com/stencyl/leadbolt/showinterstitialleadbolt.png)</br>
+![showinterstitial](https://byrobingames.github.io/img/leadbolt/showinterstitialleadbolt.png)<br/>
 Use this block to show the interstitial ad after you load the interstitial. (Show when gameover)
 
-![loadrewarded](http://www.byrobingames.com/stencyl/leadbolt/loadrewardedleadbolt.png)</br>
+![loadrewarded](https://byrobingames.github.io/img/leadbolt/loadrewardedleadbolt.png)<br/>
 Use this block to load the rewarded video from leadbolt, before you can show the video. (When scene is created)
 
-![showrewarded](http://www.byrobingames.com/stencyl/leadbolt/showrewardedleadbolt.png)</br>
+![showrewarded](https://byrobingames.github.io/img/leadbolt/showrewardedleadbolt.png)<br/>
 Use this block to show the rewarded video after you load the video. (Show when gameover)
 
-![callback1](http://www.byrobingames.com/stencyl/leadbolt/callbackleadbolt.png)</br>
+![callback1](https://byrobingames.github.io/img/leadbolt/callbackleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
 FALSE.
@@ -58,7 +53,7 @@ FALSE.
 - “is Closed”. It becomes TRUE when an Interstitial/Video ad is closed (dismiss).
 - “is Clicked”. It becomes TRUE when an Interstitial/Video ad is Clicked.
 
-![callback2](http://www.byrobingames.com/stencyl/leadbolt/callbackrewardedleadbolt.png)</br>
+![callback2](https://byrobingames.github.io/img/leadbolt/callbackrewardedleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
 FALSE.
@@ -67,6 +62,24 @@ FALSE.
 
 
 //TODO examples
+
+## Version History
+
+- 2015-11-08 (1.1) : First release
+- 2016-03-18 (1.2) : Required byRobin Extension Manager to get it work on iOS9
+- 2016-09-26 (1.3) : Update SDK to 7.1 for both iOS and Android
+- 2017-03-19 (1.4) : Update SDK to 8.0 for both iOS and Android. - Andrdoid Gradle support for openfl4
+- 2017-05-16(0.0.5) Tested for Stencyl 3.5, Required byRobin Toolset Extension Manager
+
+## Submitting a Pull Request
+
+This software is opensource.<br/>
+If you want to contribute you can make a pull request
+
+Repository: [https://github.com/byrobingames/localnotifications](https://github.com/byrobingames/localnotifications)
+
+Need help with a pull request?<br/>
+[https://help.github.com/articles/creating-a-pull-request/](https://help.github.com/articles/creating-a-pull-request/)
 
 ## Donate
 
@@ -78,8 +91,14 @@ http://www.leadbolt.com/privacy/
 
 ## License
 
-The MIT License (MIT) - LICENSE.md
-
-Copyright © 2014 byRobinGames (http://www.byrobingames.com)
-
 Author: Robin Schaafsma
+
+The MIT License (MIT)
+
+Copyright (c) 2014 byRobinGames [http://www.byrobin.nl](http://www.byrobin.nl)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
