@@ -76,7 +76,7 @@ FALSE.
 This software is opensource.<br/>
 If you want to contribute you can make a pull request
 
-Repository: [https://github.com/byrobingames/localnotifications](https://github.com/byrobingames/localnotifications)
+Repository: [https://github.com/byrobingames/leadbolt](https://github.com/byrobingames/leadbolt)
 
 Need help with a pull request?<br/>
 [https://help.github.com/articles/creating-a-pull-request/](https://help.github.com/articles/creating-a-pull-request/)
