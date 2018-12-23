@@ -46,7 +46,7 @@ Use this block to load or show the interstitial ad from leadbolt, load before yo
 ![leadboltloadshowrewarded](https://byrobingames.github.io/img/leadbolt/leadboltloadshowrewarded.png)<br/>
 Use this block to load or show the rewarded video from leadbolt, load before you can show the video.
 ***
-**Callbacks Interstitial**<br/>
+**Callbacks Interstitial and Rewarded Video**<br/>
 ![callback1](https://byrobingames.github.io/img/leadbolt/callbackleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
