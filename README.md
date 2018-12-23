@@ -32,7 +32,8 @@ the “Extension” tab.<br>
 Fill in your API KEY in the Toolset Manager
 You can find your API KEY under your Account at Leadbolt.
 ![leadboltapikey](https://byrobingames.github.io/img/leadbolt/leadboltapikey.png)<br/>
-*** <br/>
+***
+
 **Initialize Leadbolt**<br/>
 ![leadboltinitialize](https://byrobingames.github.io/img/leadbolt/leadboltinitialize.png)<br/>
 Use this block to initialize Leadbolt ads. Use this block once per user
