@@ -28,22 +28,25 @@ Go to: [https://byrobingames.github.io](https://byrobingames.github.io)
 This extension contains the following blocks. You can find them in your Palette under
 the “Extension” tab.<br>
 
-![initleadbolt](https://byrobingames.github.io/img/leadbolt/initleadbolt.png)<br/>
-Use this block to initialize your Leadbolt. Use this block once per user
-session (from the moment the user starts to play until the user quits the game). For example in a loading scene.
-
-![loadinterstitial](https://byrobingames.github.io/img/leadbolt/loadinterstitialleadbolt.png)<br/>
-Use this block to load the interstitial ad from leadbolt, before you can show the interstitial. (When scene is created)
-
-![showinterstitial](https://byrobingames.github.io/img/leadbolt/showinterstitialleadbolt.png)<br/>
-Use this block to show the interstitial ad after you load the interstitial. (Show when gameover)
-
-![loadrewarded](https://byrobingames.github.io/img/leadbolt/loadrewardedleadbolt.png)<br/>
-Use this block to load the rewarded video from leadbolt, before you can show the video. (When scene is created)
-
-![showrewarded](https://byrobingames.github.io/img/leadbolt/showrewardedleadbolt.png)<br/>
-Use this block to show the rewarded video after you load the video. (Show when gameover)
-
+Fill in your API KEY in the Toolset Manager
+You can find your API KEY under your Account at Leadbolt.
+![leadboltapikey](https://byrobingames.github.io/img/leadbolt/leadboltapikey.png)<br/>
+***
+**Initialize Leadbolt**
+![leadboltinitialize](https://byrobingames.github.io/img/leadbolt/leadboltinitialize.png)<br/>
+Use this block to initialize Leadbolt ads. Use this block once per user
+session (from the moment the user starts to play until the user quits the game). <br/>
+For example in a loading scene.
+***
+**Load/Show Interstitial Ads**
+![leadboltloadshowinterstitial](https://byrobingames.github.io/img/leadbolt/leadboltloadshowinterstitial.png)<br/>
+Use this block to load or show the interstitial ad from leadbolt, load before you can show the interstitial.
+***
+**Load/Show Rewarded Video Ads**
+![leadboltloadshowrewarded](https://byrobingames.github.io/img/leadbolt/leadboltloadshowrewarded.png)<br/>
+Use this block to load or show the rewarded video from leadbolt, load before you can show the video.
+***
+**Callbacks Interstitial**
 ![callback1](https://byrobingames.github.io/img/leadbolt/callbackleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
@@ -52,16 +55,14 @@ FALSE.
 - “did fail to load”. It becomes TRUE when an Interstitial/Video ad fails to load.
 - “is Closed”. It becomes TRUE when an Interstitial/Video ad is closed (dismiss).
 - “is Clicked”. It becomes TRUE when an Interstitial/Video ad is Clicked.
-
+***
+**Callbacks Rewarded Video**
 ![callback2](https://byrobingames.github.io/img/leadbolt/callbackrewardedleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
 FALSE.
 - “has been fully watched” It becomes TRUE when an Rewarded Video ad is fully watched.
 - “has not been fully watched” It becomes TRUE when an Rewarded Video ad is not fully watched.
-
-
-//TODO examples
 
 ## Version History
 
