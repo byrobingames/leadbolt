@@ -32,21 +32,21 @@ Fill in your API KEY in the Toolset Manager
 You can find your API KEY under your Account at Leadbolt.
 ![leadboltapikey](https://byrobingames.github.io/img/leadbolt/leadboltapikey.png)<br/>
 ***
-**Initialize Leadbolt**
+**Initialize Leadbolt**<br/>
 ![leadboltinitialize](https://byrobingames.github.io/img/leadbolt/leadboltinitialize.png)<br/>
 Use this block to initialize Leadbolt ads. Use this block once per user
 session (from the moment the user starts to play until the user quits the game). <br/>
 For example in a loading scene.
 ***
-**Load/Show Interstitial Ads**
+**Load/Show Interstitial Ads**<br/>
 ![leadboltloadshowinterstitial](https://byrobingames.github.io/img/leadbolt/leadboltloadshowinterstitial.png)<br/>
 Use this block to load or show the interstitial ad from leadbolt, load before you can show the interstitial.
 ***
-**Load/Show Rewarded Video Ads**
+**Load/Show Rewarded Video Ads**<br/>
 ![leadboltloadshowrewarded](https://byrobingames.github.io/img/leadbolt/leadboltloadshowrewarded.png)<br/>
 Use this block to load or show the rewarded video from leadbolt, load before you can show the video.
 ***
-**Callbacks Interstitial**
+**Callbacks Interstitial**<br/>
 ![callback1](https://byrobingames.github.io/img/leadbolt/callbackleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
@@ -56,7 +56,7 @@ FALSE.
 - “is Closed”. It becomes TRUE when an Interstitial/Video ad is closed (dismiss).
 - “is Clicked”. It becomes TRUE when an Interstitial/Video ad is Clicked.
 ***
-**Callbacks Rewarded Video**
+**Callbacks Rewarded Video**<br/>
 ![callback2](https://byrobingames.github.io/img/leadbolt/callbackrewardedleadbolt.png)<br/>
 Use this block in an “if statement”. Each condition becomes TRUE when a specific
 event is happening. Before and after the event, the condition will always be
