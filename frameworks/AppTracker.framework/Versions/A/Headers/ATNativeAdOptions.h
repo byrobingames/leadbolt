@@ -2,7 +2,7 @@
 //  ATNativeAdOptions.h
 //
 //  Created by Leadbolt
-//  Copyright © 2016 LeadBolt. All rights reserved.
+//  Copyright © 2018 LeadBolt. All rights reserved.
 //
 
 @interface ATNativeAdOptions : NSObject
@@ -12,5 +12,8 @@
 @property NSString *placement;
 @property ATNativeAdOptionMediaType mediaType;
 @property NSString *sid;
+@property BOOL cacheAssets;
+
+-(NSString *) toString;
 
 @end

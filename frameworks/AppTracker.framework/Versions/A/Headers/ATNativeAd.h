@@ -2,8 +2,10 @@
 //  ATNativeAd.h
 //
 //  Created by Leadbolt
-//  Copyright © 2016 LeadBolt. All rights reserved.
+//  Copyright © 2018 LeadBolt. All rights reserved.
 //
+
+#import <StoreKit/StoreKit.h>
 
 @protocol ATNativeAdDelegate;
 @class ATNativeAdCollection;
@@ -32,13 +34,20 @@ typedef enum {
 
 typedef enum {
     ATNativeAdOptionMediaTypeImage=0,
-    ATNativeAdOptionMediaTypeVideo
+    ATNativeAdOptionMediaTypeVideo,
+    ATNativeAdOptionMediaTypeHTML,
+    ATNativeAdOptionMediaTypeAny
 } ATNativeAdOptionMediaType;
 
 typedef enum {
     ATNativeAdImageTypeCover=0,
     ATNativeAdImageTypeIcon
 } ATNativeAdImageType;
+
+typedef enum {
+    ATNativeAdViewType_Height100=0,
+    ATNativeAdViewType_Height300
+} ATNativeAdViewType;
 
 
 @interface ATNativeAd : NSObject <SKStoreProductViewControllerDelegate>
@@ -48,17 +57,14 @@ typedef enum {
 @property (readonly) NSString *callToAction;
 @property (readonly) ATNativeAdOptionMediaType mediaType;
 
-@property (readonly) float duration;
-@property (readonly) NSString *imageUrlLandscape;
-@property (readonly) NSString *imageUrlPortrait;
+@property (readonly) NSString *mediaUrl;
+@property (readonly) NSString *iconUrl;
+@property (readonly) UIImage *mediaImg;
 
 
 -(void) downloadImage:(ATNativeAdImageType)type withBlock:(nullable void (^) (UIImage * __nullable image)) block;
 -(void) registerViewForInteraction:(UIView * _Nonnull)view withViewController:(UIViewController * _Nonnull)viewController;
 -(void) unregisterView;
-
--(void) setConfig:(NSDictionary * __nullable)json withDelegate:(id<ATNativeAdDelegate>)d;
--(void) doTrackEvent:(ATNativeAdTrackEvent)event;
 
 @end
 
@@ -68,5 +74,6 @@ typedef enum {
 -(void) onAdsLoaded:(ATNativeAdCollection *)collection;
 -(void) onAdsFailed:(ATNativeAdError)error;
 -(void) onAdClicked:(ATNativeAd *)ad;
+-(void) onAdDisplayed:(ATNativeAd *)ad;
 
 @end

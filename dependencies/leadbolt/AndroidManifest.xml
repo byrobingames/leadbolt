@@ -6,10 +6,11 @@
         <!-- Leadbolt -->
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:name="com.apptracker.android.module.AppModuleActivity"
-            android:hardwareAccelerated="false">
+            android:hardwareAccelerated="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>
         <service android:name="com.apptracker.android.track.AppTrackerService" />
-
+        
     </application>
  
 </manifest>

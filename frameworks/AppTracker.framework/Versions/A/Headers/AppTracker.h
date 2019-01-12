@@ -1,8 +1,8 @@
 //
-//  AppTracker.h - v8.0
+//  AppTracker.h - v9.0
 //
 //  Created by Leadbolt.
-//  Copyright (c) 2017 Leadbolt. All rights reserved.
+//  Copyright (c) 2018 Leadbolt. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,16 +10,18 @@
 #import "ATNativeAd.h"
 #import "ATNativeAdOptions.h"
 #import "ATNativeAdCollection.h"
+#import "ATNativeAdView.h"
 
 @protocol AppModuleDelegate <NSObject>
 
 @optional
 -(void) onModuleLoaded:(NSString *)placement;
--(void) onModuleClosed:(NSString *)placement;
+-(void) onModuleClosed:(NSString *)placement reward:(BOOL)reward;
 -(void) onModuleClicked:(NSString *)placement;
 -(void) onModuleCached:(NSString *)placement;
 -(void) onModuleFailed:(NSString *)placement error:(NSString *)error cached:(BOOL)iscached;
--(void) onMediaFinished:(BOOL)viewCompleted;
+//-(void) onMediaFinished:(BOOL)viewCompleted __deprecated_msg("Use onRewardUser instead.");;
+
 
 @end
 
@@ -43,19 +45,15 @@ typedef enum {
 +(void) loadModuleToCache:(NSString*) placement withUserData:(NSString*)userData;
 +(void) destroyModule;
 
-// Crash Reporting
-+(void)setCrashHandlerStatus:(BOOL)enable;
-//+(void)crashWithName:(NSString*)crashName description:(NSString*)description;
-
 
 typedef enum {
     AdOrientation_AutoDetect=0,
     AdOrientation_Landscape,
     AdOrientation_Portrait
-} AdOrientation;
+} AdOrientation __deprecated_msg("No longer needed");
 
 // force Ad Orientation
-+(void) fixAdOrientation:(AdOrientation)orientation;
++(void) fixAdOrientation:(AdOrientation)orientation __deprecated_msg("No longer needed");
 
 +(void)setAppModuleDelegate:(id<AppModuleDelegate>)delegate;
 
@@ -69,8 +67,10 @@ typedef enum {
 
 
 // Native Ad methods
-+(void) loadNativeAds:(ATNativeAdOptions *)options;
++(void) loadNativeAds;
++(void) loadNativeAdsWithCaching;
 +(void) setNativeAdDelegate:(id<ATNativeAdDelegate>)delegate;
++(ATNativeAdView *)nativeAdViewWithAd:(ATNativeAd *)ad withType:(ATNativeAdViewType)type withViewController:(UIViewController *)vC;
 
 
 @end

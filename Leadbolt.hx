@@ -8,6 +8,14 @@ import neko.Lib;
 import openfl.Lib;
 #end
 
+#if android
+#if openfl_legacy
+import openfl.utils.JNI;
+#else
+import lime.system.JNI;
+#end
+#end
+
 import com.stencyl.behavior.Script;
 import scripts.ByRobinAssets;
 
@@ -95,11 +103,11 @@ class Leadbolt {
 		initialized = true;
 		try{
 			// JNI METHOD LINKING
-			__init = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "init", "(Ljava/lang/String;)V");
-			__fetchInterstitial = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "fetchInterstitial", "()V");
-			__showInterstitial = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "showInterstitial", "()V");
-			__fetchRewardedVideo = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "fetchRewardedVideo", "()V");
-			__showRewardedVideo = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "showRewardedVideo", "()V");
+			__init = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "init", "(Ljava/lang/String;)V");
+			__fetchInterstitial = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "fetchInterstitial", "()V");
+			__showInterstitial = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "showInterstitial", "()V");
+			__fetchRewardedVideo = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "fetchRewardedVideo", "()V");
+			__showRewardedVideo = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "showRewardedVideo", "()V");
 
 			__init(leadboltId);
 		}catch(e:Dynamic){
@@ -118,7 +126,7 @@ class Leadbolt {
 			#if android
             	if (__adLoaded == null)
             	{
-                	__adLoaded = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adIsLoaded", "()Z", true);
+                	__adLoaded = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adIsLoaded", "()Z", true);
             	}
             	return __adLoaded();
             #end			
@@ -133,7 +141,7 @@ class Leadbolt {
 			#if android
             	if (__adFailedToLoad == null)
             	{
-                	__adFailedToLoad = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adFailedToLoad", "()Z", true);
+                	__adFailedToLoad = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adFailedToLoad", "()Z", true);
             	}
             	return __adFailedToLoad();
             #end
@@ -147,7 +155,7 @@ class Leadbolt {
 			#if android
             	if (__adClosed == null)
             	{
-                	__adClosed = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adClosed", "()Z", true);
+                	__adClosed = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adClosed", "()Z", true);
             	}
             	return __adClosed();
             #end
@@ -161,7 +169,7 @@ class Leadbolt {
 			#if android
             	if (__adClicked == null)
             	{
-                	__adClicked = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adClicked", "()Z", true);
+                	__adClicked = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "adClicked", "()Z", true);
             	}
             	return __adClicked();
             #end
@@ -180,7 +188,7 @@ class Leadbolt {
 			#if android
             	if (__rewardedVideoComplete == null)
             	{
-                	__rewardedVideoComplete = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "rewardedVideoComplete", "()Z", true);
+                	__rewardedVideoComplete = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "rewardedVideoComplete", "()Z", true);
             	}
             	return __rewardedVideoComplete();
             #end			
@@ -195,7 +203,7 @@ class Leadbolt {
 			#if android
             	if (__rewardedVideoFailToComplete == null)
             	{
-                	__rewardedVideoFailToComplete = openfl.utils.JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "rewardedVideoFailToComplete", "()Z", true);
+                	__rewardedVideoFailToComplete = JNI.createStaticMethod("com/byrobin/leadbolt/LeadboltEx", "rewardedVideoFailToComplete", "()Z", true);
             	}
             	return __rewardedVideoFailToComplete();
             #end

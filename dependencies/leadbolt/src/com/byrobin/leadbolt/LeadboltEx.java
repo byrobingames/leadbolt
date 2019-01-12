@@ -95,7 +95,7 @@ public class LeadboltEx extends Extension {
         Extension.mainActivity.runOnUiThread(new Runnable() {
             public void run()
             {
-                AppTracker.loadModuleToCache(Extension.mainActivity,"video");
+                AppTracker.loadModuleToCache(Extension.mainActivity,"reward");
             }
         });
         Log.d("LeadboltEx","Fetch Rewarded Video End");
@@ -108,8 +108,8 @@ public class LeadboltEx extends Extension {
             public void run()
             {
                 
-                if(AppTracker.isAdReady("video")) {
-                    AppTracker.loadModule(Extension.mainActivity,"video");
+                if(AppTracker.isAdReady("reward")) {
+                    AppTracker.loadModule(Extension.mainActivity,"reward");
                 }
                 
             }
@@ -203,9 +203,20 @@ public class LeadboltEx extends Extension {
             }
         }
         @Override
-        public void onModuleClosed(String location) {
+        public void onModuleClosed(String location, boolean reward) {
+            // Ad closed by user
+            // Add code here to resume game and/or all media including audio
             Log.i("AppTracker", "Ad closed by user - "+location);
             adClosed = true;
+
+            if(reward) {
+               completeRewardedVideo = true;
+            }
+
+            if(location.equals("reward") && !reward){
+                failToCompleteRewardedVideo = true;
+            }
+
         }
         @Override
         public void onModuleClicked(String location) {
@@ -216,16 +227,6 @@ public class LeadboltEx extends Extension {
         public void onModuleCached(String location) {
             Log.i("AppTracker", "Ad cached successfully - "+location);
             adLoaded = true;
-        }
-        @Override
-        public void onMediaFinished(boolean viewCompleted) {
-            if(viewCompleted) {
-                Log.i("AppTracker", "User finished watching rewarded video");
-                completeRewardedVideo = true;
-            } else {
-                Log.i("AppTracker", "User skipped watching rewarded video");
-                failToCompleteRewardedVideo = true;
-            }
         }
     };
 

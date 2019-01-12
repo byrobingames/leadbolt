@@ -14,6 +14,10 @@ This Extension Required the Toolset Extension Manager [https://byrobingames.gith
 
   * Interstitial Support.
   * Rewarded Video Support.
+  
+## GDPR Support
+
+See [https://www.leadbolt.com/gdpr/](https://www.leadbolt.com/gdpr/)
 
 ## How to Install
 
@@ -29,9 +33,12 @@ Go to: [https://byrobingames.github.io](https://byrobingames.github.io)
 This extension contains the following blocks. You can find them in your Palette under
 the “Extension” tab.<br>
 
-Fill in your API KEY in the Toolset Manager
-You can find your API KEY under your Account at Leadbolt.
+Fill in your API KEY in the Toolset Manager<br/>
+You can find your API KEY under your Account at Leadbolt.<br/>
+
 ![leadboltapikey](https://byrobingames.github.io/img/leadbolt/leadboltapikey.png)<br/>
+
+!!ON ANDROID YOU NEED TO ENABLE ADMOB ADS INSIDE STENCYL!!
 
 <hr/>
 
@@ -81,7 +88,8 @@ FALSE.
 - 2016-03-18 (1.2) : Required byRobin Extension Manager to get it work on iOS9
 - 2016-09-26 (1.3) : Update SDK to 7.1 for both iOS and Android
 - 2017-03-19 (1.4) : Update SDK to 8.0 for both iOS and Android. - Andrdoid Gradle support for openfl4
-- 2017-05-16(0.0.5) Tested for Stencyl 3.5, Required byRobin Toolset Extension Manager
+- 2017-05-16(1.4.1) Tested for Stencyl 3.5, Required byRobin Toolset Extension Manager
+- 2019-01-12(1.4.2) FIX: Android JNI import; Update SDK to 9.0 for both iOS and Android
 
 ## Submitting a Pull Request
 

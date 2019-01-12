@@ -42,7 +42,7 @@ using namespace leadbolt;
 @synthesize failToCompleteRewardedVideo;
 
 #define LOCATION_CODE_INAPP     @"inapp"
-#define LOCATION_CODE_VIDEO     @"video"
+#define LOCATION_CODE_REWARD     @"reward"
 
 - (id)initWithID:(NSString*)ID
 {
@@ -74,13 +74,13 @@ using namespace leadbolt;
 
 - (void)fetchRewardedVideoAd
 {
-    [AppTracker loadModuleToCache:LOCATION_CODE_VIDEO];
+    [AppTracker loadModuleToCache:LOCATION_CODE_REWARD];
 }
 
 - (void)showRewardedVideoAd
 {
-    if([AppTracker isAdReady:LOCATION_CODE_VIDEO]) {
-        [AppTracker loadModule:LOCATION_CODE_VIDEO viewController:root];
+    if([AppTracker isAdReady:LOCATION_CODE_REWARD]) {
+        [AppTracker loadModule:LOCATION_CODE_REWARD viewController:root];
     }
 }
 
@@ -108,6 +108,20 @@ using namespace leadbolt;
         // Add code here to resume game and/or all media including audio
          adClosed = YES;
     }
+-(void)onModuleClosed:(NSString *)placement reward:(BOOL)reward {
+    // Ad closed by user
+    NSLog(@"Ad closed by user - %@", placement);
+    // Add code here to resume game and/or all media including audio
+    adClosed = YES;
+    
+    if(reward) {
+        completeRewardedVideo = YES;
+    }
+    
+    if(([placement isEqual:LOCATION_CODE_REWARD]) && !reward){
+        failToCompleteRewardedVideo = YES;
+    }
+}
 -(void)onModuleFailed:(NSString *)placement error:(NSString *)error cached:(BOOL)iscached
     {
         if(iscached) {
@@ -118,7 +132,9 @@ using namespace leadbolt;
             adFailToLoad = NO;
         }
     }
--(void) onMediaFinished:(BOOL)viewCompleted
+
+//__deprecated_msg("Use onRewardUser instead.")
+/*-(void) onMediaFinished:(BOOL)viewCompleted
     {
         if(viewCompleted) {
             NSLog(@"User finished watching rewarded video");
@@ -127,7 +143,7 @@ using namespace leadbolt;
             NSLog(@"User skipped watching rewarded video");
             failToCompleteRewardedVideo = YES;
         }
-    }
+    }*/
     
 @end
 
